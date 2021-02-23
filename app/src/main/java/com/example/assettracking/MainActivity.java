@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.assettracking.Dashboard.Dashboard;
 import com.example.assettracking.RegistrationSystem.SignIn.SignIn;
 import com.example.assettracking.RegistrationSystem.SignUp.SignUp;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+//                Intent intent = new Intent(MainActivity.this, Dashboard.class);
                 Intent intent = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent);
                 finish();
