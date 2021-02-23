@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(MainActivity.this, Dashboard.class);
                 Intent intent = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent);
-                finish();
             }
         }, 5000);
     }

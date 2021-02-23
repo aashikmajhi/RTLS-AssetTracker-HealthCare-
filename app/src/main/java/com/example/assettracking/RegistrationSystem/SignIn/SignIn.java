@@ -12,15 +12,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.assettracking.Dashboard.Dashboard;
 import com.example.assettracking.R;
 import com.example.assettracking.RegistrationSystem.SignUp.SignUp;
 import com.google.android.material.textfield.TextInputEditText;
+
+import br.com.simplepass.loading_button_lib.customViews.CircularProgressButton;
 
 public class SignIn extends AppCompatActivity {
 
     private TextInputEditText LUsername, LPassword;
     private TextView NewUser;
     private Button btnLogin;
+    private CircularProgressButton cirLoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,15 @@ public class SignIn extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
         setContentView(R.layout.activity_sign_in);
+        cirLoginButton=findViewById(R.id.cirLoginButton);
+
+        cirLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SignIn.this, Dashboard.class);
+                startActivity(i);
+            }
+        });
 
 
     }

@@ -13,7 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:paddingTop="20dp">
@@ -30,16 +30,18 @@
 
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:text="Already \nhave an \nAccount?" />
+                    android:text="Already \nhave an \nAccount?"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_register_hero" />
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_register_hero"
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -47,15 +49,18 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:hint="Enter Username or Email"
-                android:textColorHint="@color/black">
+                android:textColorHint="@color/black"
+                tools:ignore="HardcodedText">
 
                 <EditText
                     android:id="@+id/editTextEmail"
                     style="@style/modifiedEditText"
+                    android:importantForAutofill="no"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black" />
+                    android:textColorHint="@color/black"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -63,15 +68,18 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:hint="Enter password"
-                android:textColorHint="@color/black">
+                android:textColorHint="@color/black"
+                tools:ignore="HardcodedText">
 
                 <EditText
                     android:id="@+id/editTextPassword"
                     style="@style/modifiedEditText"
+                    android:importantForAutofill="no"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black" />
+                    android:textColorHint="@color/black"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -80,7 +88,8 @@
                 android:layout_marginTop="10dp"
                 android:text="Forgot Password?"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/newsMoreTextSize" />
+                android:textSize="@dimen/newsMoreTextSize"
+                tools:ignore="HardcodedText" />
 
             <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
                 android:id="@+id/cirLoginButton"
@@ -92,7 +101,7 @@
                 app:spinning_bar_color="#FFF"
                 app:spinning_bar_padding="6dp"
                 app:spinning_bar_width="4dp"
-                tools:ignore="MissingClass" />
+                tools:ignore="HardcodedText,MissingClass" />
 
             <TextView
                 style="@style/parent"
@@ -103,7 +112,7 @@
                 android:textColor="@color/themeColor"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                tools:ignore="OnClick" />
+                tools:ignore="HardcodedText,OnClick" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,7 +134,8 @@
                     android:layout_weight="6"
                     android:text="Use other Methods"
                     android:textAlignment="center"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
 
                 <View
                     android:layout_width="0dp"
@@ -143,13 +153,15 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_facebook" />
+                    android:src="@drawable/ic_facebook"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_google_plus" />
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_google_plus"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -158,19 +170,19 @@
         android:layout_width="11dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/ic_side_bg" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
         android:layout_marginBottom="30dp"
         android:onClick="onLoginClick"
         android:src="@drawable/ic_add_img"
-        tools:ignore="OnClick" />
+        tools:ignore="ContentDescription,OnClick" />
 
 </RelativeLayout>
