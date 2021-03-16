@@ -31,7 +31,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="Here’s\nyour first\nstep with \nus! "
-                    android:textColor="@color/whiteTextColor"
+                    android:textColor="@color/blue"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
@@ -65,15 +65,15 @@
                         <EditText
                             android:id="@+id/editTextName"
                             style="@style/modifiedEditText"
-                            android:hint="Name"
+                            android:hint="Enter your name"
                             android:importantForAutofill="no"
                             android:inputType="textPersonName"
                             android:maxLines="1"
-                            android:text="Enter your name"
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/black"
                             android:textColorHint="@color/black"
                             android:textColorLink="@color/black"
+                            android:textSize="25sp"
                             tools:ignore="HardcodedText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,10 +90,10 @@
                             android:importantForAutofill="no"
                             android:inputType="textEmailAddress"
                             android:maxLines="1"
-                            android:text="Email"
                             android:textColor="@color/black"
                             android:textColorHint="@color/design_default_color_on_secondary"
                             android:textColorLink="@color/black"
+                            android:textSize="25sp"
                             tools:ignore="HardcodedText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,10 +110,10 @@
                             android:importantForAutofill="no"
                             android:inputType="phone"
                             android:maxLines="1"
-                            android:text="Mobile Number"
                             android:textColor="@color/black"
                             android:textColorHint="@color/black"
                             android:textColorLink="@color/black"
+                            android:textSize="25sp"
                             tools:ignore="HardcodedText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,10 +130,10 @@
                             android:importantForAutofill="no"
                             android:inputType="textPassword"
                             android:maxLines="1"
-                            android:text="Password`"
                             android:textColor="@color/black"
                             android:textColorHint="@color/black"
                             android:textColorLink="@color/black"
+                            android:textSize="25sp"
                             tools:ignore="HardcodedText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,6 +143,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:text="Register"
+                        android:textSize="25sp"
                         app:initialCornerAngle="27dp"
                         app:spinning_bar_color="#FFF"
                         app:spinning_bar_padding="6dp"
@@ -183,7 +184,7 @@
                     android:text="Use other Methods"
                     android:textAlignment="center"
                     android:textColor="@color/whiteTextColor"
-                    android:textSize="12sp"
+                    android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <View

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "694238379964",
+    "project_id": "assettracking-97875",
+    "storage_bucket": "assettracking-97875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694238379964:android:4c48e7e0c8d2e7c2fdf5b9",
+        "android_client_info": {
+          "package_name": "com.example.assettracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694238379964-bq8llm0jotgb4o3885mpidgnj3ob9gck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4__D9r8lqpgNQra6PAbKpY3V-I1dsPKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694238379964-bq8llm0jotgb4o3885mpidgnj3ob9gck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
