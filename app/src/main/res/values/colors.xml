@@ -14,4 +14,19 @@
     <color name="navyblue">#002347</color>
     <color name="green">#005900</color>
     <color name="bluishblue">#3366ff</color>
+    <color name="lightblue">#97c6e3</color>
+    <color name="light">#c3e8f6</color>
+    <color name="blondgoose">#dbf6f4</color>
+    <color name="themeColor">#11CFC5</color>
+    <color name="darkTextColor">#020000</color>
+    <color name="contentTextColor">#ff8349</color>
+    <color name="register_bk_color">#11CFC5</color>
+    <color name="login_bk_color">#fff</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#004fa4</color>
+    <color name="armygreen">#4b5320</color>
+    <color name="azure">#007fff</color>
+    <color name="babyblue">#89cff0</color>
+    <color name="babyblueeyes">#a1caf1</color>
+    <color name="bubbles">#e7feff</color>
 </resources>
