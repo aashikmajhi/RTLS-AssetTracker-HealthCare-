@@ -6,7 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.assettracking.View.VIewAssetHistory;
+import com.example.assettracking.RegistrationSystem.SignIn.SignIn;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, VIewAssetHistory.class);
+                Intent intent = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent);
                 finish();
             }

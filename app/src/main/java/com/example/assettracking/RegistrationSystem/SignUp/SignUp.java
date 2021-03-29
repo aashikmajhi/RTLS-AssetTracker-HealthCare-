@@ -1,21 +1,24 @@
 package com.example.assettracking.RegistrationSystem.SignUp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.assettracking.Database.User;
 import com.example.assettracking.R;
 import com.example.assettracking.RegistrationSystem.SignIn.SignIn;
+import com.example.assettracking.Sensor.Vibration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -49,6 +52,11 @@ public class SignUp extends AppCompatActivity {
         cirRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!validate()) {
+                    validate();
+                    saveRegister();
+                    return;
+                }
                 UserReg();
             }
         });
@@ -100,5 +108,44 @@ public class SignUp extends AppCompatActivity {
     public void onLoginClick(View view) {
         startActivity(new Intent(this, SignIn.class));
         overridePendingTransition(R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
+
+    private boolean validate() {
+        boolean flag = true;
+        if (TextUtils.isEmpty(editTextName.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+            editTextName.setError("Enter your first name");
+            editTextName.requestFocus();
+            flag = false;
+        } else if (TextUtils.isEmpty(editTextEmail.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+            editTextEmail.setError("Enter yor last name");
+            editTextEmail.requestFocus();
+            flag = false;
+        } else if (TextUtils.isEmpty(editTextMobile.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+            editTextMobile.setError("Please Enter Username");
+            editTextMobile.requestFocus();
+            flag = false;
+        } else if (TextUtils.isEmpty(editTextPassword.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+            editTextPassword.setError("Please enter Password");
+            editTextPassword.requestFocus();
+            flag = false;
+        }
+        return flag;
+    }
+
+    private void saveRegister() {
+        SharedPreferences sharedPreferences = getSharedPreferences("UserRegistrationDetails", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("username", editTextName.getText().toString());
+        editor.putString("password", editTextMobile.getText().toString());
+        editor.putString("firstName", editTextMobile.getText().toString());
+        editor.putString("lastName", editTextPassword.getText().toString());
+        editor.commit();
+
+        Toast.makeText(this, "Data has been saved Successfully", Toast.LENGTH_SHORT).show();
     }
 }

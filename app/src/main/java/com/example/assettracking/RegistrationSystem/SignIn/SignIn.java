@@ -1,8 +1,10 @@
 package com.example.assettracking.RegistrationSystem.SignIn;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.assettracking.Dashboard.Dashboard;
 import com.example.assettracking.R;
 import com.example.assettracking.RegistrationSystem.SignUp.SignUp;
+import com.example.assettracking.Sensor.Vibration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -45,14 +48,19 @@ public class SignIn extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         cirLoginButton.setOnClickListener(view -> {
-
+            if (!validate()) {
+                validate();
+                return;
+            }
             LoginUser();
-                Intent i = new Intent(SignIn.this, Dashboard.class);
-                startActivity(i);
+            saveLogin();
+            Intent i = new Intent(SignIn.this, Dashboard.class);
+            startActivity(i);
         });
 
 
     }
+
     private void LoginUser() {
 
         String email = username.getText().toString().trim();
@@ -85,5 +93,35 @@ public class SignIn extends AppCompatActivity {
     public void onLoginClick(View View) {
         startActivity(new Intent(this, SignUp.class));
         overridePendingTransition(R.anim.slide_in_right, R.anim.stay);
+    }
+
+    private void saveLogin() {
+        SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("username", username.getText().toString());
+        editor.putString("password", userPassword.getText().toString());
+        editor.commit();
+
+        Toast.makeText(this, "Data has been saved Successfully", Toast.LENGTH_SHORT).show();
+    }
+
+
+    private boolean validate() {
+        boolean flag = true;
+
+        if (TextUtils.isEmpty(username.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+            username.setError("Please Enter Username");
+            username.requestFocus();
+            flag = false;
+        } else if (TextUtils.isEmpty(userPassword.getText().toString())) {
+            Vibration.getVibration(getBaseContext());
+//            vibrateNow(250);
+            userPassword.setError("Please enter Password");
+            userPassword.requestFocus();
+            flag = false;
+        }
+        return flag;
     }
 }
