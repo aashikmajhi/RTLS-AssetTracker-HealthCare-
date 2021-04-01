@@ -23,11 +23,25 @@
             <TextView
                 android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_menu"
-                android:text="USERNAME"
+                android:layout_height="60dp"
+                android:text="Aashik"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                tools:ignore="HardcodedText,InvalidId" />
+
+            <TextView
+                android:id="@+id/tvAssetmgm"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/tvUsername"
+                android:text="Asset Management"
+                android:textColor="@color/bluishblue"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
                 tools:ignore="HardcodedText,InvalidId" />
 
             <ImageView
@@ -85,15 +99,15 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/bg_navy" />
+                        android:src="@drawable/stethoscope" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Hello"
+                        android:text="Stethoscope"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -116,15 +130,15 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/bg_green" />
+                        android:src="@drawable/sphygmomanometer" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Hello"
+                        android:text="Sphygmomanometer"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -147,15 +161,15 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/bg_yellow" />
+                        android:src="@drawable/surgical_clamps" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Hello"
+                        android:text="Clamps"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -210,15 +224,15 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_navy" />
+                            android:src="@drawable/laryngoscope" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Laryngoscope"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -241,15 +255,15 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_green" />
+                            android:src="@drawable/laparoscopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Laparoscopic"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -272,15 +286,15 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_yellow" />
+                            android:src="@drawable/pulse_oximeter" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Pulse Oximeter"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -335,15 +349,15 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_navy" />
+                            android:src="@drawable/retractors" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Retractors"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -366,15 +380,15 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_green" />
+                            android:src="@drawable/defibrillator" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Defibrillator"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -397,15 +411,138 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/bg_yellow" />
+                            android:src="@drawable/surgical_headlamp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Hello"
+                            android:text="Headlamp"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:text="Critical Equipments"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:alignmentMode="alignMargins"
+                android:background="@color/blondgoose"
+                android:columnCount="3"
+                android:columnOrderPreserved="false"
+                android:padding="2dp"
+                android:rowCount="3">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/surgical_staplers" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Staplers"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/surgical_scissors" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Scissors"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_rowWeight="1"
+                    android:layout_column="2"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/surgical_energy_system" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Energy System"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -466,7 +603,7 @@
                             android:layout_marginTop="2dp"
                             android:text="Hello"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -497,7 +634,7 @@
                             android:layout_marginTop="2dp"
                             android:text="Hello"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -528,130 +665,7 @@
                             android:layout_marginTop="2dp"
                             android:text="Hello"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </GridLayout>
-        </HorizontalScrollView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@color/white"
-            android:text="Critical Equipments"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText" />
-
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                android:alignmentMode="alignMargins"
-                android:background="@color/blondgoose"
-                android:columnCount="3"
-                android:columnOrderPreserved="false"
-                android:padding="2dp"
-                android:rowCount="3">
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="120dp"
-                    android:layout_height="130dp"
-                    android:layout_rowWeight="1"
-                    android:layout_column="0"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="6dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/bg_navy" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Hello"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="120dp"
-                    android:layout_height="130dp"
-                    android:layout_rowWeight="1"
-                    android:layout_column="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="6dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/bg_green" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Hello"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="120dp"
-                    android:layout_height="130dp"
-                    android:layout_rowWeight="1"
-                    android:layout_column="2"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="6dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/bg_yellow" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Hello"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

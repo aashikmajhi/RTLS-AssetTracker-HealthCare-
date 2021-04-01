@@ -6,6 +6,18 @@ public class GPSdata {
     public GPSdata() {
     }
 
+
+    public GPSdata(double lati, double longi, String toolname) {
+        this.lati = lati;
+        this.longi = longi;
+        this.toolname = toolname;
+    }
+
+    public GPSdata(double lati, double longi) {
+        this.lati = lati;
+        this.longi = longi;
+    }
+
     public double getLati() {
         return lati;
     }
@@ -28,5 +40,9 @@ public class GPSdata {
 
     public void setToolname(String toolname) {
         this.toolname = toolname;
+    }
+
+    public boolean mapCoordinates() {
+        return false;
     }
 }

@@ -21,4 +21,8 @@ public class ToolsandEquipment {
     public void setRfid(String rfid) {
         this.rfid = rfid;
     }
+
+    public boolean checkinData() {
+        return false;
+    }
 }

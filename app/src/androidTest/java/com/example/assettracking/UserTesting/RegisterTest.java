@@ -35,5 +35,41 @@ public class RegisterTest {
         onView(withId(R.id.cirRegisterButton))
                 .perform(click());
     }
+
+    @Test
+    public void testSignUpemptyData() {
+        onView(withId(R.id.editTextName))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextEmail))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextMobile))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextPassword))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.cirRegisterButton))
+                .perform(click());
+    }
+
+    @Test
+    public void testSignUpDuplicateData() {
+        onView(withId(R.id.editTextName))
+                .perform(typeText("Aashik Majhi"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextEmail))
+                .perform(typeText("aashikmajhi@gmail.com"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextMobile))
+                .perform(typeText("9803922659"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextPassword))
+                .perform(typeText("password123"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.cirRegisterButton))
+                .perform(click());
+    }
 }
 

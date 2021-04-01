@@ -29,4 +29,28 @@ public class LoginTest {
         onView(withId(R.id.cirLoginButton))
                 .perform(click());
     }
+
+    @Test
+    public void LoginUserwithInvalidData() {
+        onView(withId(R.id.editTextEmail))
+                .perform(typeText("aashik@gmail.com"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextPassword))
+                .perform(typeText("password123"))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.cirLoginButton))
+                .perform(click());
+    }
+
+    @Test
+    public void LoginUserBlank() {
+        onView(withId(R.id.editTextEmail))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.editTextPassword))
+                .perform(typeText(""))
+                .perform(closeSoftKeyboard());
+        onView(withId(R.id.cirLoginButton))
+                .perform(click());
+    }
 }

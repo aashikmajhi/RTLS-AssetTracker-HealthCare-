@@ -12,4 +12,17 @@ public class User {
         this.mobileno = mobileno;
         this.password = password;
     }
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public boolean Userlogin() {
+        return false;
+    }
+
+    public boolean UserRegister() {
+        return false;
+    }
 }
