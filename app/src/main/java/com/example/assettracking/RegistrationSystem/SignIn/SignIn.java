@@ -75,7 +75,7 @@ public class SignIn extends AppCompatActivity {
 
                             if (firebaseUser.isEmailVerified()) {
 
-                                Intent intent = new Intent(SignIn.this, SignUp.class);
+                                Intent intent = new Intent(SignIn.this, Dashboard.class);
                                 Toast.makeText(SignIn.this, "LogIn Successful", Toast.LENGTH_SHORT).show();
                                 startActivity(intent);
 

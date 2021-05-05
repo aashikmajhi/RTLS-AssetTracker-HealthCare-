@@ -9,16 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.assettracking.Asset.Assets;
 import com.example.assettracking.R;
 
 import java.util.ArrayList;
 
 public class AssetAdapter extends RecyclerView.Adapter<AssetAdapter.ViewHolder>{
     private Context context;
-    private ArrayList<Assets> assetsArrayList;
+    private ArrayList<String> assetsArrayList;
 
-    public AssetAdapter(Context myContext, ArrayList<Assets> myAssets){
+    public AssetAdapter(Context myContext, ArrayList<String> myAssets){
         context = myContext;
         assetsArrayList=myAssets;
     }
@@ -31,8 +30,8 @@ public class AssetAdapter extends RecyclerView.Adapter<AssetAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull AssetAdapter.ViewHolder holder, int position) {
-        holder.tvname.setText(assetsArrayList.get(position).getName());
-        holder.tvlocation.setText(assetsArrayList.get(position).getLocation());
+        holder.tvname.setText(assetsArrayList.get(position));
+        holder.tvlocation.setText(assetsArrayList.get(position));
     }
 
     @Override
@@ -48,7 +47,6 @@ public class AssetAdapter extends RecyclerView.Adapter<AssetAdapter.ViewHolder>{
             super(itemView);
             tvname = (TextView) itemView.findViewById(R.id.tvHistory);
             tvlocation = (TextView) itemView.findViewById(R.id.tvCheckins);
-
         }
     }
 }

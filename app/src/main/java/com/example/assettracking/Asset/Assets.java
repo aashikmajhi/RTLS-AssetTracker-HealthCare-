@@ -1,38 +1,30 @@
 package com.example.assettracking.Asset;
 
+import com.google.android.gms.tasks.Task;
+
 public class Assets {
-    public String id, name, location;
+   // public String id, name, location;
+    private Task<Void> key;
+    private String value;
 
-    public Assets() {
+    public Assets(Task<Void> key, String value) {
+        this.key = key;
+        this.value = value;
     }
 
-    public Assets(String id, String name, String location) {
-        this.id = id;
-        this.name = name;
-        this.location = location;
+    public Task<Void> getKey() {
+        return key;
     }
 
-    public String getId() {
-        return id;
+    public void setKey(Task<Void> key) {
+        this.key = key;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getValue() {
+        return value;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    public void setValue(String value) {
+        this.value = value;
     }
 }
